@@ -1,9 +1,6 @@
 # Propriedade OwnsObjects
-Este projeto foi desenvolvido em Delphi 10.2, para demonstração da uitlizadade da propriedade FOwnsObjects da classe do Delphi TObjectList
+Este projeto foi desenvolvido em Delphi 10.2, afins de demonstrações da utilida da propriedade OwnsObjects, da classe do Delphi, TObjectList.
 
-A Propriedade OwnsObjects do método Create, da classe TObjectList, contém o seguinte sentido:
- - A lista deve liberar elementos quando eles forem removidos.
- 
 A propriedade OwnsObjects especifica se a lista de strings possui os objetos armazenados ou não. Se a propriedade OwnsObjects for definida como True , o destruidor Destroy irá liberar a memória alocada para esses objetos.
 
 
