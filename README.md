@@ -15,7 +15,7 @@ https://www.freepascal.org/docs-html/current/fcl/contnrs/tobjectlist.ownsobjects
 
 1º Rode a aplicação.
 
-2º Clique no "TRUE" e feche a tela.
+2º Clique no botão "TRUE" e feche a tela.
      - Você verá que nada irá acontecer.
 
 3º Rode a aplicação novamente.
