@@ -1,5 +1,5 @@
 # Propriedade OwnsObjects
-Este projeto foi desenvolvido em Delphi 10.2, afins de demonstrações da utilida da propriedade OwnsObjects, da classe do Delphi, TObjectList.
+Este projeto foi desenvolvido em Delphi 10.2, afins de demonstrações da utilidade da propriedade OwnsObjects, da classe do Delphi, TObjectList.
 
 A propriedade OwnsObjects especifica se a lista de strings possui os objetos armazenados ou não. Se a propriedade OwnsObjects for definida como True , o destruidor Destroy irá liberar a memória alocada para esses objetos.
 
