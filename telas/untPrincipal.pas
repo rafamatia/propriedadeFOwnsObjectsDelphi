@@ -19,6 +19,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
+    procedure TestarListaDeObjetos(ADestruirObjetos: Boolean = True);
     procedure AdicionarItensNaLista(var AOListaObjeto: TListaObjeto; const ACodigo: Integer; const ADescricao: String);
   public
     { Public declarations }
@@ -44,34 +45,28 @@ begin
   AOListaObjeto.AdicionarItemNaLista(OMeuObjeto);
 end;
 
-procedure TfrmPrincipal.btnFalseClick(Sender: TObject);
+procedure TfrmPrincipal.TestarListaDeObjetos(ADestruirObjetos: Boolean);
 var
   OListaDeObjetos: TListaObjeto;
   intLinha: Integer;
 begin
-  OListaDeObjetos := TListaObjeto.Create(False);
+  OListaDeObjetos := TListaObjeto.Create(ADestruirObjetos);
   try
     for intLinha := 0 to mmListaDeObjetos.Lines.Count - 1 do
       AdicionarItensNaLista(OListaDeObjetos, intLinha, mmListaDeObjetos.Lines[intLinha]);
   finally
     FreeAndNil(OListaDeObjetos);
-    ShowMessage('Processo concluído, feche o sistema para ver o que acontece.');
   end;
 end;
 
-procedure TfrmPrincipal.btnTrueClick(Sender: TObject);
-var
-  OListaDeObjetos: TListaObjeto;
-  intLinha: Integer;
+procedure TfrmPrincipal.btnFalseClick(Sender: TObject);
 begin
-  OListaDeObjetos := TListaObjeto.Create(True);
-  try
-    for intLinha := 0 to mmListaDeObjetos.Lines.Count - 1 do
-      AdicionarItensNaLista(OListaDeObjetos, intLinha, mmListaDeObjetos.Lines[intLinha]);
-  finally
-    FreeAndNil(OListaDeObjetos);
-    ShowMessage('Processo concluído, feche o sistema para ver o que acontece.');
-  end;
+  TestarListaDeObjetos(False);
+end;
+
+procedure TfrmPrincipal.btnTrueClick(Sender: TObject);
+begin
+  TestarListaDeObjetos;
 end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
